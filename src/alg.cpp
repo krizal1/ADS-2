@@ -4,7 +4,7 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-    double res = pown(value, n);
+    double res = pow(value, n);
     return res;
 }
 
