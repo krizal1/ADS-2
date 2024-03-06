@@ -9,20 +9,20 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
-    uint64_t res = 1;
+    uint16_t res = 1;
     for (int i = 1; i <= n; i++)
         res *= i;
     return res;
 }
 
-double calcItem(double x, uint64_t n) {
-    return pown(x, n) / fact(n); // tgamma(n + 1) вычисляет значение факториала n
+double calcItem(double x, uint16_t n) {
+    return pown(x, n) / fact(n);
 }
 
 double expn(double x, uint16_t count) {
-    double res = 1.0;                  // Начальное значение ряда (n=0)
+    double res = 1.0;
     for (uint16_t n = 1; n <= count; ++n) {
-        res += pown(x, n) / fact(n); // Добавляем очередное слагаемое к результату
+        res += pown(x, n) / fact(n);
     }
     return res;
 }
